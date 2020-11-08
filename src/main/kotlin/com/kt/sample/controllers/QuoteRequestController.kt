@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class QuoteRequestController(private val quoteRequestService: QuoteRequestService) {
+class QuoteRequestController(
+        private val quoteRequestService: QuoteRequestService
+) {
 
     @PostMapping("/quote-request")
     fun createQuoteRequest(@RequestBody quoteRequest: QuoteRequest): ResponseEntity<QuoteRequestResponse> {
